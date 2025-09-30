@@ -8,7 +8,7 @@ function TvShows() {
     const fetchTvShows = async () => {
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/tv/popular?api_key=2cde2da77336c9da8aaef79ce5b8cbe0&language=en-US&page=1`
+          `${import.meta.env.VITE_API_URL}/tv/popular?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&page=1`
         );
         setShows(response.data.results);
       } catch (error) {

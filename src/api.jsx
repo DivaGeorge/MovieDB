@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_KEY ="2cde2da77336c9da8aaef79ce5b8cbe0";
-const BASE_URL = "https://api.themoviedb.org/3";
+const API_KEY = import.meta.env.VITE_API_KEY;
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 const tmdb = axios.create({
   baseURL: BASE_URL
@@ -42,4 +42,4 @@ export const fetchMoviesByGenre = async (genre) => {
   if (!genreId) return [];  
   const response = await tmdb.get(`/discover/movie?api_key=${API_KEY}&with_genres=${genreId}&sort_by=popularity.desc`);
   return response.data.results;
-} 
+}

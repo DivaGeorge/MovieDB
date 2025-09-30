@@ -3,8 +3,9 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./MovieDetails.css";
 
-const API_KEY = "2cde2da77336c9da8aaef79ce5b8cbe0";
-const BASE_URL = "https://api.themoviedb.org/3";
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+const BASE_URL = import.meta.env.VITE_TMDB_BASE_URL;
+
 
 function MovieDetail() {
   const { id } = useParams();
