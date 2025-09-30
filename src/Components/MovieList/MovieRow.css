@@ -1,0 +1,43 @@
+.movie-row {
+  margin: 20px;
+
+}
+
+.row-title {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+
+}
+
+.row-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.row-cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.row-cards::-webkit-scrollbar-thumb {
+  background: #1db954;
+  border-radius: 10px;
+}
+
+.row-cards::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.movie-card img {
+  border-radius: 10px;
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+}
+.movie-card img {
+  border-radius: 10px;
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+}
